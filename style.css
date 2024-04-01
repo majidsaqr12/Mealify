@@ -1,0 +1,504 @@
+body, h1, h2, h3, p { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+
+body{
+    padding-top: 70px;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Dark theme styles */
+.dark-theme {
+    background-color: #000;
+    color: #fff;
+}
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding-right: 50px;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+    margin-top: 0; 
+}
+
+
+/* Navigation Menu - Horizontal by default */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* CSS for menu item hover and active states */
+.nav-menu li a:hover, .nav-menu li a.active {
+    border-bottom: 2px solid red; /* Change color as needed */
+    padding-bottom: 5px; /* Adjust padding to prevent content jump */
+}
+
+/* Optional: Smooth transition for hover effect */
+.nav-menu li a {
+    transition: border-bottom 0.3s ease-in-out;
+}
+
+/* Toggle Button - Hidden by default */
+.toggle-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    font-size: 24px;
+    background: none;
+    border: #f0f0f0;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #f8f9fa;
+        padding: 10px 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .toggle-button {
+        display: block;
+    }
+}
+
+/*Hero section*/
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff; /* Assuming a white background */
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px; /* Increased padding to match the design */
+    color: #333; /* Dark text color for readability */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.content {
+    width: 40%; /* Adjusted to give more space to the image */
+    margin-right: 5%; /* Adds margin between content and image */
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    color: #333; /* Dark text color */
+    margin-bottom: 20px;
+}
+
+.content p {
+    color: #777; /* Lighter text color for the paragraph */
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap; /* Ensures buttons wrap on smaller screens */
+}
+
+.buttons button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.buttons button:first-child {
+    background-color: #d9534f;
+    color: white;
+}
+
+.buttons button:first-child:hover {
+    background-color: #c9302c;
+}
+
+.buttons button:last-child {
+    background-color: transparent;
+    color: #d9534f;
+    border: 2px solid #d9534f;
+}
+
+.buttons button:last-child:hover {
+    background-color: #d9534f;
+    color: white;
+}
+
+.image {
+    width: 55%; /* Allows the image to take more space */
+}
+
+.image img {
+    width: 100%; /* Makes the image fill its container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Optional: Adds a slight border radius to the image */
+}
+
+@media (max-width: 768px) {
+    .hero {
+    flex-direction: column;
+    text-align: center;
+      padding: 50px; /* Reduced padding for smaller screens */
+    }
+    .content, .image {
+    width: 100%;
+    margin-right: 0;
+    }
+    .content {
+    order: 2;
+    margin-bottom: 30px;
+    }
+    .image {
+    order: 1;
+    }
+    .buttons {
+    justify-content: center;
+    margin-bottom: 30px;
+    }
+}
+
+/*Chef sextion*/
+
+.chef-section {
+    text-align: center;
+    padding: 50px;
+    /* background-color: #f4f4f4; */
+}
+
+.chef-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.chef-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.chef {
+    width: 30%; /* Adjust the width as needed */
+    background: #fff;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Simple box-shadow for styling */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease;
+}
+
+.chef:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+}
+
+.chef img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Adjust if your images have rounded corners */
+}
+
+.chef h3 {
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.chef p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.chef .bio {
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .chef-container {
+    flex-direction: column;
+    }
+    .chef {
+    width: auto;
+    }
+}
+
+.gallery-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.gallery-item:hover .overlay {
+    transform: translateY(0);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item .text {
+    color: white;
+    font-size: 20px;
+    padding: 2px;
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+
+/*Contact section*/
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    /* background: #f8f9fa; */
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 450px;
+}
+
+.contact-details {
+    width: calc(50% - 60px);
+    margin-left: 60px;
+}
+
+h2 {
+    color: #d8232a;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.info-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #d8232a;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #bb1f28;
+}
+.info-block i {
+    font-size: 24px; /* Icon size */
+    width: 30px; /* Icon width */
+    color: #d8232a; /* Icon color */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.info-block div {
+    display: inline-block;
+    text-align: left;
+}
+
+
+@media (max-width: 768px) {
+    .contact-section {
+    flex-direction: column;
+    }
+    .contact-map iframe {
+    width: 100%;
+    height: 300px;
+    }
+    .contact-details {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+    }
+}
+
+/*Footer section*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #222;
+    color: white;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-logo {
+    max-width: 150px; /* Adjust logo size */
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    margin-right: 10px;
+}
+
+.newsletter form {
+    display: flex;
+    margin-top: 20px;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    border: none;
+    padding: 10px 20px;
+    background-color: #d8232a; /* Adjust button background color */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter button i {
+    margin-right: 5px;
+}
+
+.get-in-touch p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.get-in-touch i {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+
+    .newsletter input {
+        margin-bottom: 10px;
+    }
+}

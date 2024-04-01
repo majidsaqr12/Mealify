@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Mealify</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <h1 style="color: #333;">Mealify<span style="color: red; border-radius: 50px;">.</span></h1>
+        </div>
+        <nav>
+            <button class="toggle-button" id="toggleButton">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#chef">chef</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle" id="themeToggle">🌞</button>
+    </header>
+
+    <div class="hero">
+        <div class="content">
+            <h1>ENJOY YOUR HEALTHY DELICIOUS FOOD</h1>
+            <p>Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
+            <div class="buttons">
+                <button onclick="bookTable()" style="border-bottom-left-radius: 25px; border-top-right-radius: 30px; border-bottom-right-radius: 30px; background-color: red;">Book a Table</button>
+                <button onclick="watchVideo()">Watch a Video</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="images/pizza.png" alt="Delicious Food">
+        </div>
+    </div>
+
+    <section class="chef-section" id="chef">
+        <h2>Our Professional Chefs</h2>
+        <div class="chef-container">
+            <div class="chef">
+                <img src="images/chefs-1.jpg" alt="Walter White">
+                <h3>Walter White</h3>
+                <p>Master Chef</p>
+                <div class="bio">Velit aut quia fugit et. Dolurum et voluptate...</div>
+            </div>
+            <div class="chef">
+                <img src="images/chefs-2.jpg" alt="Sarah Johnson">
+                <h3>Sarah Johnson</h3>
+                <p>Patissier</p>
+                <div class="bio">Quo esse repellendus quia id. Est eum et accusantium...</div>
+            </div>
+            <div class="chef">
+                <img src="images/chefs-3.jpg" alt="William Anderson">
+                <h3>William Anderson</h3>
+                <p>Cook</p>
+                <div class="bio">Vero omnis enim consequatur. Voluptas consectetur...</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+        <h2>Check Our Gallery</h2>
+        <div class="gallery-grid">
+            <!-- Gallery Item 1 -->
+            <div class="gallery-item">
+                <img src="images/meal-1.jpg" alt="Pizza">
+                <div class="overlay">
+                    <div class="text">Pizza</div>
+                </div>
+            </div>
+            <!-- Gallery Item 2 -->
+            <div class="gallery-item">
+                <img src="images/meal-2.jpg" alt="Steak">
+                <div class="overlay">
+                    <div class="text">Steak</div>
+                </div>
+            </div>
+            <!-- Gallery Item 3 -->
+            <div class="gallery-item">
+                <img src="images/meal-3.jpg" alt="Burger">
+                <div class="overlay">
+                    <div class="text">Burger</div>
+                </div>
+            </div>
+            <!-- Gallery Item 4 -->
+            <div class="gallery-item">
+                <img src="images/meal-4.jpg" alt="Fried Chicken">
+                <div class="overlay">
+                    <div class="text">Fried Chicken</div>
+                </div>
+            </div>
+            <!-- Gallery Item 5 -->
+            <div class="gallery-item">
+                <img src="images/meal-5.jpg" alt="Spaghetti">
+                <div class="overlay">
+                    <div class="text">Spaghetti</div>
+                </div>
+            </div>
+        </div>
+    </section>   
+
+    <section class="contact-section" id="contact">
+        <div class="contact-map">
+            <!-- Replace the src with your actual Google Maps link -->
+            <iframe
+                src="https://www.google.com/maps/embed?..."
+                width="600" height="450" frameborder="0" style="border:0;"
+                allowfullscreen="" aria-hidden="false" tabindex="0">
+            </iframe>
+        </div>
+    
+        <div class="contact-details">
+            <h2>Need Help? Contact Us</h2>
+            
+            <div class="info-block">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <p>Our Address</p>
+                    <p>A108 Adam Street, New York, NY 535022</p>
+                </div>
+            </div>
+            <div class="info-block">
+                <i class="fas fa-phone"></i>
+                <div>
+                    <p>Call Us</p>
+                    <p>+1 5589 55488 55</p>
+                </div>
+            </div>
+            <div class="info-block">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <p>Email Us</p>
+                    <p>contact@example.com</p>
+                </div>
+            </div>
+            <div class="info-block">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <p>Opening Hours</p>
+                    <p>Mon-Sat: 11AM - 23PM, Sunday: Closed</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <input type="text" id="subject" name="subject" placeholder="Subject">
+                    <textarea id="message" name="message" placeholder="Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-section about">
+            <h1 style="padding-bottom: 10px;">Mealify<span style="color: red; border-radius: 50px;">.</span></h1>
+            <!-- <img src="logo.png" alt="Mealify Logo" class="footer-logo"> -->
+            <p style="padding-bottom: 20px;">Mealify is a restaurant landing page that offers a delicious dining experience to its customers.</p>
+            <p style="color: white; text-align: center;">Social Media</p>
+            <hr>
+            <!-- Social Media Icons -->
+            <div class="social-icons" style="justify-content: center; padding-bottom: 30px;">
+                <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                <a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-section newsletter">
+            <h3>Subscribe our Newsletter</h3>
+            <p>Don't miss out on our latest menu updates and exclusive offers - join our newsletter today and stay up-to-date with all things Mealify!</p>
+            <form action="#" method="post">
+                <input type="email" placeholder="Enter Your Email Address" required>
+                <button type="submit"><i class="fas fa-envelope"></i> Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-section get-in-touch">
+            <h3>Get in Touch</h3>
+            <p><i class="fas fa-map-marker-alt"></i> A108 Adam Street, New York, NY 535022</p>
+            <p><i class="fas fa-envelope"></i> contact@example.com</p>
+            <p><i class="fas fa-phone"></i> +1 5589 55488 55</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
